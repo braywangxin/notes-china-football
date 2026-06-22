@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简明指南 · leisu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', sans-serif;
+            background-color: #faf7f0;
+            color: #2e2b26;
+            line-height: 1.75;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+            background: #fffcf8;
+            border-radius: 28px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .intro-line {
+            font-size: 1.15rem;
+            font-weight: 440;
+            letter-spacing: 0.02em;
+            color: #5f5a53;
+            border-left: 4px solid #dac6b0;
+            padding-left: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 520;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.6rem;
+            color: #3e392f;
+            line-height: 1.3;
+        }
+
+        h1 small {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #8b7f72;
+            display: block;
+            margin-top: 0.25rem;
+        }
+
+        p {
+            margin-bottom: 1.4rem;
+        }
+
+        .dropcap {
+            font-size: 1.1rem;
+        }
+
+        .highlight-box {
+            background: #f4efe8;
+            padding: 1.4rem 1.6rem;
+            border-radius: 20px;
+            margin: 2rem 0 1.8rem 0;
+            border: 1px solid #e6ddd2;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 2rem 0 2.2rem 0;
+        }
+
+        .feature-card {
+            flex: 1 1 200px;
+            background: #fcf9f4;
+            border: 1px solid #e4dbcf;
+            border-radius: 20px;
+            padding: 1.2rem 1rem 1rem 1rem;
+            transition: background 0.15s;
+        }
+
+        .feature-card:hover {
+            background: #f6efe6;
+        }
+
+        .feature-card strong {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #3e392f;
+            margin-bottom: 0.3rem;
+            letter-spacing: 0.01em;
+        }
+
+        .feature-card span {
+            font-size: 0.95rem;
+            color: #5f5850;
+        }
+
+        .quote-block {
+            border-left: 3px solid #d2b9a3;
+            background: #f8f4ee;
+            padding: 1.2rem 1.6rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            font-size: 0.98rem;
+            color: #4d463e;
+        }
+
+        .quote-block::before {
+            content: "💡 ";
+            font-size: 1.2rem;
+        }
+
+        .note {
+            background: #ede7de;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            display: inline-block;
+            font-size: 0.9rem;
+            color: #4d463e;
+            margin-bottom: 1.2rem;
+        }
+
+        .btn-like {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #cbb7a3;
+            padding: 0.35rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            color: #4b433b;
+            text-decoration: none;
+            transition: background 0.1s, border-color 0.1s;
+        }
+
+        .btn-like:hover {
+            background: #e8dfd3;
+            border-color: #b8a28b;
+        }
+
+        .ending {
+            margin-top: 2.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e6ddd2;
+            font-size: 0.98rem;
+            color: #5f5850;
+            text-align: center;
+        }
+
+        .faq-mini {
+            margin: 2rem 0 0.5rem 0;
+        }
+
+        .faq-mini details {
+            background: #fcf9f4;
+            border: 1px solid #e4dbcf;
+            border-radius: 18px;
+            padding: 0.8rem 1.2rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .faq-mini summary {
+            font-weight: 460;
+            cursor: pointer;
+            color: #3e392f;
+            padding: 0.2rem 0;
+        }
+
+        .faq-mini details p {
+            margin: 0.6rem 0 0.1rem 0;
+            font-size: 0.95rem;
+            color: #4d463e;
+        }
+
+        a {
+            color: #5b4d3e;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #dac6b0;
+        }
+
+        a:hover {
+            color: #2e271f;
+            text-decoration-color: #a58e7a;
+        }
+
+        @media (max-width: 540px) {
+            .container {
+                padding: 1.8rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .feature-grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="intro-line">温和开场 · 一个安静的入口</div>
+
+        <h1>
+            关于这个站点
+            <small>leisu · 简明指南</small>
+        </h1>
+
+        <p class="dropcap">
+            如果你偶然来到这里，或许只是想找一处方便访问的入口。<br>
+            这个页面不是文档库，也不是仪表盘。它更像是写在便签纸上的一条提醒：<strong>有些东西就在那儿，你只需要一个指向它的路径。</strong>
+        </p>
+
+        <div class="highlight-box">
+            <p>📌 如果你正在走动、切换设备、或者只是不想每次都翻找收藏夹——</p>
+            <p style="margin-top:0.4rem;">把 <a href="https://zhs-portal-leisu.com">leisu</a> 放在手边，会省去一点小麻烦。</p>
+        </div>
+
+        <p>
+            许多门户类页面堆满按钮和入口，反而让人犹豫。这里更接近一张索引卡片：你知道自己能做什么，只需要确认位置。页面本身不替你操作，也不做任何承诺——<strong>它只提供一个可靠的锚点</strong>。
+        </p>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <strong>🧭 路标式入口</strong>
+                <span>一个干净、直接的访问点，适合作为起始页或快捷书签。</span>
+            </div>
+            <div class="feature-card">
+                <strong>📋 轻量提示</strong>
+                <span>不收纳多余内容，只保留必要的引导逻辑。</span>
+            </div>
+            <div class="feature-card">
+                <strong>🔐 访问提醒</strong>
+                <span>记得核对环境与权限，公用的路径有时需要自己的钥匙。</span>
+            </div>
+        </div>
+
+        <div class="quote-block">
+            一个常见的场景：你在咖啡馆用朋友的电脑查资料，或者借了同事的平板做演示——输入框还在，但你总是想不起完整链接。这时，一个简短、好记的地址就够了。<br>
+            <span style="display:inline-block; margin-top:0.4rem;">→ <a href="https://zhs-portal-leisu.com">leisu</a> 恰好承担这个角色。</span>
+        </div>
+
+        <p>
+            页面本身不包含敏感操作，但如果你通过它进入后续功能，请留意你所处的网络环境和账户上下文。公共设备上记得及时退出，私人设备上可以放心保存书签。<strong>便利和责任常常是同一件事的两面。</strong>
+        </p>
+
+        <div class="faq-mini">
+            <details>
+                <summary>这个页面主要用来做什么？</summary>
+                <p>提供一个稳定的导航起点，避免反复输入地址或依赖搜索。适合作为团队的常用入口、个人书签，或是临时访问的中转页。</p>
+            </details>
+            <details>
+                <summary>访问时需要注意什么？</summary>
+                <p>确认你使用的网络可以正常到达目标站点。部分环境可能需要 VPN 或内部网络权限。如果页面加载异常，检查地址拼写或联系管理员。</p>
+            </details>
+            <details>
+                <summary>页面内容会变吗？</summary>
+                <p>整体定位保持不变。偶尔会调整提示措辞或样式，但核心功能始终是作为一个轻量级门户，不堆砌功能。</p>
+            </details>
+        </div>
+
+        <div class="ending">
+            <span class="note">📎 温和提醒 · 不打扰</span>
+            <p style="margin-top:0.8rem;">
+                你可以把当前页面加入书签，或者直接记住 <a href="https://zhs-portal-leisu.com">leisu</a> ——四个字母，一次跳转。
+            </p>
+            <p style="margin-top:0.6rem; font-size:0.9rem; color:#7a7166;">
+                没有浮夸的承诺，也没有多余的装饰。它就在那里，当你需要的时候。
+            </p>
+            <p style="margin-top:1.2rem; font-size:0.85rem; color:#9a9187;">
+                页面版本 · 日常更新
+            </p>
+        </div>
+    </div>
+</body>
+</html>
